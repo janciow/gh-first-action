@@ -1,5 +1,5 @@
-name: Frust work
-on: workflow_dispatch
+name: First workflow
+on: [workflow_dispatch, push]
 jobs:
   firt-job:
     runs-on: ubuntu-latest
