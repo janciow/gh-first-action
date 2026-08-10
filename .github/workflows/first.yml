@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Print geeedeng
         run: echo "Hello"
-      - name: goodby
+      - name: good bay
         run: echo "Bay done"
+      - name: not bay
+        run: echo "bay none"
         
