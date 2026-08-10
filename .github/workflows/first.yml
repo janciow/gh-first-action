@@ -1,11 +1,13 @@
 name: First workflow
 on: [workflow_dispatch, push]
 jobs:
-  firt-job:
+  first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print geeedeng
-        run: echo "Hello"
+      - name: Runnig first job
+        run: echo "hi shell"
+      - name: check os relies
+        run: cat /etc/os-release
       - name: good bay
         run: echo "Bay done"
       - name: not bay
