@@ -11,5 +11,16 @@ jobs:
       - name: good bay
         run: echo "Bay done"
       - name: not bay
-        run: echo "bay none"
-        
+        run: |
+          echo "bay none"
+          sleep 15
+  next-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking host name
+        run: hostname
+      - name: run mutiple comands
+        run: |
+          echo "hi 1"
+          echo "hi 2 'date'"   
+          sleep 10
