@@ -16,6 +16,32 @@ jobs:
           sleep 15
   next-job:
     runs-on: ubuntu-latest
+    needs: first-job
+    steps:
+      - name: checking host name
+        run: hostname
+      - name: run mutiple comands
+        run: |
+          echo "hi 1"
+          echo "hi 2 'date'"   
+          sleep 10
+  next-job-3:
+    name: job3
+    needs: [first-job, next-job] 
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking host name
+        run: hostname
+      - name: run mutiple comands
+        run: |
+          echo "hi 1"
+          echo "hi 2 'date'"   
+          sleep 10
+
+  next-job-4:
+    name: job3
+    needs: [first-job, next-job,next-job-3] 
+    runs-on: ubuntu-latest
     steps:
       - name: checking host name
         run: hostname
